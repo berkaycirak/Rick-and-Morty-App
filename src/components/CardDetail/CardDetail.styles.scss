@@ -1,0 +1,22 @@
+.container {
+  .character-details {
+    display: grid;
+    border: 1px solid black;
+    max-width: 500px;
+    margin: 5rem auto;
+    padding: 1rem;
+    justify-items: center;
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      display: inline-block;
+      max-height: 450px;
+      max-width: 400px;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 1px 7px 13px 5px #000000;
+    }
+  }
+}

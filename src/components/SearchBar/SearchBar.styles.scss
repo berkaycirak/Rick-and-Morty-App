@@ -45,7 +45,11 @@
       border-radius: 10px;
       background-color: black;
       color: white;
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ac3c20;
+      }
     }
 
     &.active {
