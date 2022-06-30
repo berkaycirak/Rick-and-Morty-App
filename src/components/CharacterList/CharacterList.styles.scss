@@ -1,0 +1,20 @@
+.character-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

@@ -1,9 +1,11 @@
 import './Pagination.styles.scss';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import CharacterContext from '../../context/CharacterContext';
 
 function Pagination() {
-  const { charactersPerPage, characterData } = useContext(CharacterContext);
+  const { charactersPerPage, characterData, setCurrentPage, setLoading } =
+    useContext(CharacterContext);
   const pageNumbers = [];
 
   for (
@@ -19,9 +21,15 @@ function Pagination() {
       <ul className='pagination-list'>
         {pageNumbers.map((number) => (
           <li key={number} className='page-item'>
-            <a href='!#' className='page-link'>
+            <Link
+              to='#'
+              onClick={() => {
+                setCurrentPage(number);
+              }}
+              className='page-link'
+            >
               {number}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
