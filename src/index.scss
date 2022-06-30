@@ -5,10 +5,13 @@
 }
 
 body {
+  position: relative;
   background: url('https://images4.alphacoders.com/936/thumb-1920-936813.png');
   background-repeat: repeat;
   background-size: cover;
   background-position: 0 -130px;
+  background-attachment: fixed;
+  min-height: 100vh;
 
   &:after {
     content: '';
