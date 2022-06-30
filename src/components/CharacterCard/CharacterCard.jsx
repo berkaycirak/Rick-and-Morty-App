@@ -3,7 +3,7 @@ import './CharacterCard.styles.scss';
 
 function CharacterCard({ character }) {
   return (
-    <Link to={`/characters/${character.name}`}>
+    <Link to={`/character-detail/${character.name}`}>
       <div key={character.id}>
         <div>{character.name}</div>
         <img src={character.image} alt={character.name} />

@@ -6,15 +6,21 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <CharacterProvider>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/characters/:name' element={<CharacterDetail />} />
-        </Routes>
-      </Router>
-    </CharacterProvider>
+    <div className='App'>
+      <CharacterProvider>
+        <Navbar />
+        <Router>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path='/characters/:page' element={<Home />} />
+            <Route
+              path='/character-detail/:name'
+              element={<CharacterDetail />}
+            />
+          </Routes>
+        </Router>
+      </CharacterProvider>
+    </div>
   );
 }
 

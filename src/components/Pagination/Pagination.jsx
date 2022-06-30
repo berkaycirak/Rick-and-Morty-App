@@ -22,7 +22,7 @@ function Pagination() {
         {pageNumbers.map((number) => (
           <li key={number} className='page-item'>
             <Link
-              to='#'
+              to={`/characters/page=${number}`}
               onClick={() => {
                 setCurrentPage(number);
               }}
