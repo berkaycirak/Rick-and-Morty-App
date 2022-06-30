@@ -1,0 +1,12 @@
+.pagination {
+  display: flex;
+  padding: 10px;
+  &-list {
+    display: flex;
+    position: relative;
+    left: 50%;
+    li {
+      padding: 10px;
+    }
+  }
+}
