@@ -7,16 +7,20 @@ function SearchBar() {
   const inputReference = useRef(null);
 
   return (
-    <div className={`search-bar ${isExpanded && 'active'} `}>
-      <input ref={inputReference} type='text' placeholder='Search' />
-      <FaSearch
-        className='btn'
-        size='22px'
-        onClick={() => {
-          setIsExpanded(!isExpanded);
-        }}
-      />
-      {isExpanded && inputReference.current.focus()}
+    <div className='search'>
+      <p className={`warning ${isExpanded && 'hide'} `}>Click for search</p>
+      <div className={`search-bar ${isExpanded && 'active'} `}>
+        <input ref={inputReference} type='text' placeholder='Search' />
+        <div
+          onClick={() => {
+            setIsExpanded(!isExpanded);
+          }}
+          className='icon'
+        >
+          <FaSearch className='btn' size='22px' />
+        </div>
+        {isExpanded && inputReference.current.focus()}
+      </div>
     </div>
   );
 }
