@@ -2,10 +2,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
+  row-gap: 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 8rem;
 
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);

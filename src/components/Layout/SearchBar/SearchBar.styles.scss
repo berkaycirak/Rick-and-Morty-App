@@ -1,0 +1,38 @@
+.search-bar {
+  position: relative;
+  display: flex;
+  top: 50px;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    input {
+      width: 250px;
+    }
+    .btn {
+      transform: translateX(100px);
+    }
+  }
+
+  .btn {
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    height: 30px;
+    width: 50px;
+
+    transition: transform 0.3s ease;
+  }
+
+  input {
+    height: 40px;
+    width: 50px;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    color: white;
+    transition: width 0.3s ease;
+  }
+}

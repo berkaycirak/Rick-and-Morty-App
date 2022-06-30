@@ -4,9 +4,9 @@ import './CharacterCard.styles.scss';
 function CharacterCard({ character }) {
   return (
     <Link to={`/character-detail/${character.name}`}>
-      <div key={character.id}>
-        <div>{character.name}</div>
-        <img src={character.image} alt={character.name} />
+      <div className='card' key={character.id}>
+        <h1 className='card-name'>{character.name}</h1>
+        <img className='card-img' src={character.image} alt={character.name} />
       </div>
     </Link>
   );

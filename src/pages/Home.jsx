@@ -1,10 +1,10 @@
-import { useContext, useEffect } from 'react';
-import CharacterContext from '../context/CharacterContext';
 import CharacterList from '../components/CharacterList/CharacterList';
+import SearchBar from '../components/Layout/SearchBar/SearchBar';
 
 function Home() {
   return (
     <div>
+      <SearchBar />
       <CharacterList />
     </div>
   );
