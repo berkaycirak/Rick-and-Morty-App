@@ -8,7 +8,17 @@
     position: relative;
     left: 50%;
     li {
-      padding: 10px;
+      .page-link {
+        padding: 10px;
+        margin-right: 10px;
+        &.active {
+          color: red;
+          background-color: rgba(0, 0, 0, 0.8);
+          padding: 3px 8px;
+          border-radius: 10px;
+          text-align: center;
+        }
+      }
     }
   }
 }

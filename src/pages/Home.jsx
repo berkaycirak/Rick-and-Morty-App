@@ -1,5 +1,5 @@
 import CharacterList from '../components/CharacterList/CharacterList';
-import SearchBar from '../components/Layout/SearchBar/SearchBar';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 function Home() {
   return (

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import CharacterContext from '../../context/CharacterContext';
 
 function Pagination() {
-  const { charactersPerPage, characterData, setCurrentPage, setLoading } =
+  const { charactersPerPage, characterData, setCurrentPage } =
     useContext(CharacterContext);
   const pageNumbers = [];
 
@@ -26,7 +26,7 @@ function Pagination() {
               onClick={() => {
                 setCurrentPage(number);
               }}
-              className='page-link'
+              className={`page-link `}
             >
               {number}
             </Link>
