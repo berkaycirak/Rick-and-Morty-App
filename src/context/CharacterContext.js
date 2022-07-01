@@ -8,8 +8,6 @@ export const CharacterProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [charactersPerPage, setCharactersPerPage] = useState(5);
 
-  const [loading, setLoading] = useState(false);
-
   // Fetch the api, and set the character infos into data array.
   useEffect(() => {
     axios.get('https://rickandmortyapi.com/api/character').then((response) => {
@@ -17,10 +15,17 @@ export const CharacterProvider = ({ children }) => {
     });
   }, []);
 
+  // Filtering
+  const [text, setText] = useState('');
+  // Filtered Character
+  const filteredCharacters = characterData.filter((filteredCharacter) =>
+    filteredCharacter.name.toLowerCase().includes(text.toLowerCase())
+  );
+
   // Get current Characters
   const indexOfLastCharacter = currentPage * charactersPerPage;
   const indexOfFirstCharacter = indexOfLastCharacter - charactersPerPage;
-  const currentCharacters = characterData.slice(
+  const currentCharacters = filteredCharacters.slice(
     indexOfFirstCharacter,
     indexOfLastCharacter
   );
@@ -28,12 +33,13 @@ export const CharacterProvider = ({ children }) => {
   return (
     <CharacterContext.Provider
       value={{
+        filteredCharacters,
         currentCharacters,
         charactersPerPage,
         characterData,
         setCurrentPage,
-        loading,
-        setLoading,
+        text,
+        setText,
       }}
     >
       {children}

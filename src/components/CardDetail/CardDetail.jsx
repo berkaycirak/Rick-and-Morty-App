@@ -9,10 +9,20 @@ function CardDetail({ characterDetail }) {
       <div className='character-details'>
         <h1 className='character-name'>{name}</h1>
         <img className='character-img' src={image} alt='' />
-        <h1 className='character-name'>Gender: {gender}</h1>
-        <h2>Species: {species}</h2>
-        <h2>Status: {status}</h2>
-        <h2>Location: {location.name}</h2>
+        <div className='character-props'>
+          <h2 className='character-name'>
+            <span>Gender:</span> {gender}
+          </h2>
+          <h2>
+            <span>Species:</span> {species}
+          </h2>
+          <h2>
+            <span>Status:</span> {status}
+          </h2>
+          <h2>
+            <span>Location:</span> {location.name}
+          </h2>
+        </div>
       </div>
 
       <Link className='back-btn' to='/'>

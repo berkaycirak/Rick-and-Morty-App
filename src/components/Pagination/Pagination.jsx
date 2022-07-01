@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import CharacterContext from '../../context/CharacterContext';
 
 function Pagination() {
-  const { charactersPerPage, characterData, setCurrentPage } =
+  const { charactersPerPage, filteredCharacters, setCurrentPage } =
     useContext(CharacterContext);
   const pageNumbers = [];
 
   for (
     let i = 1;
-    i <= Math.ceil(characterData.length / charactersPerPage);
+    i <= Math.ceil(filteredCharacters.length / charactersPerPage);
     i++
   ) {
     pageNumbers.push(i);
